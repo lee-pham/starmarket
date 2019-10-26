@@ -4,13 +4,16 @@ function init() {
     }
 
     const bElements = document.getElementsByTagName('button');
-
+    var filtered = [];
     async function starmarket() {
         for (let i = 0; i < bElements.length; i++) {
             if (bElements[i].innerHTML == 'ADD') {
-                bElements[i].click();
-                await sleep(2000);
+                filtered.push(bElements[i])
             }
+        }
+        for (let i = 0; i < filtered.length; i++) {
+            filtered[i].click();
+            await sleep(2000);
         }
         alert('Done!');
     }
