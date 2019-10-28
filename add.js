@@ -2,6 +2,13 @@ function init() {
     function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
+    
+    async function loadMore() {
+        for (let i = 0; i < 20; i++) {
+            document.getElementsByClassName('btn load-more')[0].click();
+            await sleep(400);
+        }
+    }
 
     const bElements = document.getElementsByTagName('button');
     var filtered = [];
@@ -17,6 +24,7 @@ function init() {
         }
         alert('Done!');
     }
+    loadMore();
     starmarket();
 }
 
