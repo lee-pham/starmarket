@@ -6,7 +6,7 @@ function init() {
     async function loadMore() {
         for (let i = 0; i < 20; i++) {
             document.getElementsByClassName('btn load-more')[0].click();
-            await sleep(400);
+            await sleep(350);
         }
     }
 
@@ -20,7 +20,7 @@ function init() {
         }
         for (let i = 0; i < filtered.length; i++) {
             filtered[i].click();
-            await sleep(2000);
+            await sleep(900);
         }
         alert('Done!');
     }
