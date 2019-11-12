@@ -9,7 +9,7 @@ function init() {
     }
 
     function loadMore() {
-        for (let i = 0; i < 20; i++) {
+        while (document.getElementsByClassName('btn load-more')[0] != undefined) {
             document.getElementsByClassName('btn load-more')[0].click();
             sleep(350)
         }
